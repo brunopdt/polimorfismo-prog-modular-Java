@@ -5,6 +5,12 @@ public class Proprietario extends EntidadeImobiliaria {
     super(nome, cpf);
   }
 
+  /**
+   * Método que calcula o valor total arrecadado pelo proprietário, somando o
+   * valor bruto dos aluguéis mensais de todas as suas propriedades
+   * 
+   * @return double
+   */
   public double valorTotalArrecadado() {
     double valor = 0;
 
@@ -15,6 +21,14 @@ public class Proprietario extends EntidadeImobiliaria {
     return valor;
   }
 
+  /**
+   * Método que calcula o valor líquido a ser recebido pelo proprietário,
+   * subtraindo do aluguel bruto a comissão da imobiliária e as taxas de
+   * condomínio ou seguro de
+   * incêndio
+   * 
+   * @return double
+   */
   public double valorLiquidoAReceber() {
     double valor = 0;
 

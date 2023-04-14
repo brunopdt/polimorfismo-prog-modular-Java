@@ -5,6 +5,12 @@ public class Imobiliaria extends EntidadeImobiliaria {
     super(nome, cnpj);
   }
 
+  /**
+   * Método que calcula o valor total arrecadado pela imobiliária, somando o valor
+   * da comissão de todos os aluguéis mensais dos imóveis
+   * 
+   * @return double
+   */
   public double valorTotalArrecadado() {
     double valor = 0;
 

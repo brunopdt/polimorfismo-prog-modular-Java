@@ -1,5 +1,5 @@
 
-public class Imovel {
+public abstract class Imovel {
   protected double valorVenda;
   protected String endereco;
   protected int anoConstrucao;
@@ -27,8 +27,11 @@ public class Imovel {
     return valorAluguel;
   }
 
-  public double comissaoImobiliaria() {
-    return 0;
-  }
+  /**
+   * Método abstrato para override nas classes filhas
+   * 
+   * @return double
+   */
+  public abstract double comissaoImobiliaria();
 
 }

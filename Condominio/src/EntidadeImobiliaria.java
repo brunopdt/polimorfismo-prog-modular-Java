@@ -13,6 +13,13 @@ public class EntidadeImobiliaria {
     valorAlugueis = 0;
   }
 
+  /**
+   * Método que filtra os imóveis de um proprietário ou imobiliária pelo ano de
+   * construção do mesmo
+   * 
+   * @param ano
+   * @return List<Imovel>: lista dos imóveis correspondentes
+   */
   public List<Imovel> imoveisPorAnoDeConstrucao(int ano) {
     List<Imovel> imoveisCorrespondentes = new ArrayList<Imovel>();
 
@@ -25,6 +32,12 @@ public class EntidadeImobiliaria {
     return imoveisCorrespondentes;
   }
 
+  /**
+   * Adiciona o imóvel à lista de imóveis da imobiliária ou proprietário
+   * 
+   * @param imovel
+   * @return void
+   */
   public void adicionarImovel(Imovel imovel) {
     imoveis.add(imovel);
   }

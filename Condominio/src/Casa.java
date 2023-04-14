@@ -10,6 +10,13 @@ public class Casa extends Imovel {
     this.valorAluguel = calculaAluguelMensal();
   }
 
+  /**
+   * Método que calcula o valor do aluguel mensal da casa, considerando o
+   * valor de venda, valor anual do seguro do incêndio, benefícios e idade do
+   * imóvel
+   * 
+   * @return double
+   */
   private double calculaAluguelMensal() {
     double valor = (this.valorVenda * 0.005) + (this.valorSeguroIncendio / 12) + (quantBeneficios * 200);
     int idade = 2023 - anoConstrucao;
@@ -24,20 +31,37 @@ public class Casa extends Imovel {
     return valor;
   }
 
-  public double getValorSeguroIncendio() {
-    return valorSeguroIncendio;
-  }
-
+  /**
+   * Método que calcula a comissão da imobiliária (12%), excluindo o valor do
+   * seguro de incêndio
+   * 
+   * @Override comissaoImobiliaria()
+   * @return double
+   */
   @Override
   public double comissaoImobiliaria() {
     return (this.valorAluguel - (valorSeguroIncendio / 12)) * 0.12;
   }
 
+  /**
+   * Método toString.
+   * <p>
+   * Informa o valor do seguro, desconto, endereço, quantidade de benefícios,
+   * valor do aluguel, valor de venda, nome do proprietário e nome da imobiliária,
+   * respectivamente
+   * 
+   * @Override toString()
+   * @return String
+   */
   @Override
   public String toString() {
     return "Casa [valorSeguroIncendio=" + valorSeguroIncendio + ", desconto=" + desconto + ", endereco=" + endereco
         + ", quantBeneficios=" + quantBeneficios + ", valorAluguel=" + valorAluguel + ", valorVenda="
         + valorVenda + ", nomeProprietario=" + proprietario.getNome() + ", nomeImobiliaria=" + imobiliaria.getNome()
         + "]";
+  }
+
+  public double getValorSeguroIncendio() {
+    return valorSeguroIncendio;
   }
 }
