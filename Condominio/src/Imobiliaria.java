@@ -9,7 +9,7 @@ public class Imobiliaria extends EntidadeImobiliaria {
     double valor = 0;
 
     for (Imovel imovel : imoveis) {
-      valor += imovel.valorAluguelImobiliaria();
+      valor += imovel.comissaoImobiliaria();
     }
 
     return valor;

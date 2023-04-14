@@ -14,8 +14,8 @@ public class Casa extends Imovel {
     double valor = (this.valorVenda * 0.005) + (this.valorSeguroIncendio / 12) + (quantBeneficios * 200);
     int idade = 2023 - anoConstrucao;
 
-    while (desconto < 30) {
-      for (int i = 0; i < idade / 5; i++) {
+    for (int i = 0; i < idade / 5; i++) {
+      if (desconto < 30) {
         valor *= 0.9;
         this.desconto += 10;
       }
@@ -29,7 +29,7 @@ public class Casa extends Imovel {
   }
 
   @Override
-  public double valorAluguelImobiliaria() {
+  public double comissaoImobiliaria() {
     return (this.valorAluguel - (valorSeguroIncendio / 12)) * 0.12;
   }
 
@@ -37,7 +37,7 @@ public class Casa extends Imovel {
   public String toString() {
     return "Casa [valorSeguroIncendio=" + valorSeguroIncendio + ", desconto=" + desconto + ", endereco=" + endereco
         + ", quantBeneficios=" + quantBeneficios + ", valorAluguel=" + valorAluguel + ", valorVenda="
-        + valorVenda
+        + valorVenda + ", nomeProprietario=" + proprietario.getNome() + ", nomeImobiliaria=" + imobiliaria.getNome()
         + "]";
   }
 }

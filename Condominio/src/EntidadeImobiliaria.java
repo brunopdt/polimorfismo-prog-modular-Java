@@ -13,9 +13,8 @@ public class EntidadeImobiliaria {
     valorAlugueis = 0;
   }
 
-  public String imoveisPorAnoDeConstrucao(int ano) {
+  public List<Imovel> imoveisPorAnoDeConstrucao(int ano) {
     List<Imovel> imoveisCorrespondentes = new ArrayList<Imovel>();
-    String imoveisString = "";
 
     for (Imovel imovel : imoveis) {
       if (imovel.anoConstrucao == ano) {
@@ -23,11 +22,7 @@ public class EntidadeImobiliaria {
       }
     }
 
-    for (Imovel imovel : imoveisCorrespondentes) {
-      imoveisString += imovel.toString() + "\n";
-    }
-
-    return imoveisString;
+    return imoveisCorrespondentes;
   }
 
   public void adicionarImovel(Imovel imovel) {

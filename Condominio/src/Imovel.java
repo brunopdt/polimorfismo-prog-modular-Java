@@ -27,7 +27,7 @@ public class Imovel {
     return valorAluguel;
   }
 
-  public double valorAluguelImobiliaria() {
+  public double comissaoImobiliaria() {
     return 0;
   }
 

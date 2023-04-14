@@ -19,7 +19,7 @@ public class Proprietario extends EntidadeImobiliaria {
     double valor = 0;
 
     for (Imovel imovel : imoveis) {
-      valor += imovel.getValorAluguel() - imovel.valorAluguelImobiliaria();
+      valor += imovel.getValorAluguel() - imovel.comissaoImobiliaria();
       if (imovel instanceof Casa) {
         valor -= ((Casa) imovel).getValorSeguroIncendio() / 12;
       } else if (imovel instanceof Apartamento) {
