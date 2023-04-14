@@ -1,12 +1,6 @@
-package test;
 
 import static org.junit.Assert.assertEquals;
 import org.junit.Test;
-
-import Apartamento;
-import Casa;
-import Imobiliaria;
-import Proprietario;
 
 public class ImovelTest {
 
