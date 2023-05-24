@@ -5,6 +5,7 @@ import org.junit.Test;
 public class ImovelTest {
 
   @Test
+  @SuppressWarnings("unused")
   public void deveAdicionarNaListaDeImoveisProprietario() {
     Imobiliaria imobiliaria = new Imobiliaria("Imobiliaria", "123456789");
     Proprietario proprietario = new Proprietario("Proprietario", "123456789");
@@ -16,6 +17,7 @@ public class ImovelTest {
   }
 
   @Test
+  @SuppressWarnings("unused")
   public void deveAdicionarNaListaDeImoveisImobiliaria() {
     Imobiliaria imobiliaria = new Imobiliaria("Imobiliaria", "123456789");
     Proprietario proprietario = new Proprietario("Proprietario", "123456789");
@@ -53,6 +55,7 @@ public class ImovelTest {
   }
 
   @Test
+  @SuppressWarnings("unused")
   public void deveFiltrarPorAnoDeConstrucao() {
     Imobiliaria imobiliaria = new Imobiliaria("Minha Imobiliária", "123");
     Proprietario proprietario = new Proprietario("João Silva", "123");
@@ -94,6 +97,7 @@ public class ImovelTest {
   }
 
   @Test
+  @SuppressWarnings("unused")
   public void deveCalcularGanhoTotalDaImobiliaria() {
     Imobiliaria imobiliaria = new Imobiliaria("Quinto Andar", "123");
     Proprietario proprietario = new Proprietario("Jorge", "123");
@@ -112,6 +116,7 @@ public class ImovelTest {
   }
 
   @Test
+  @SuppressWarnings("unused")
   public void valorTotalArrecadadoComPropriedades() {
     Imobiliaria imobiliaria = new Imobiliaria("Quinto Andar", "123");
     Proprietario proprietario = new Proprietario("Jorge", "123");
@@ -128,6 +133,7 @@ public class ImovelTest {
   }
 
   @Test
+  @SuppressWarnings("unused")
   public void valorLiquidoAReceberComPropriedades() {
     Imobiliaria imobiliaria = new Imobiliaria("Quinto Andar", "123");
     Proprietario proprietario = new Proprietario("Jorge", "123");
